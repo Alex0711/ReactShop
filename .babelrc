@@ -1,0 +1,6 @@
+{
+    "presets": [
+        "@babel/preset-env", //para que javascript y las nuevas funcionalidades funcionen en cualquier navegador
+        "@babel/preset-react" //para que react funcione en cualquier navegador
+    ]
+}
