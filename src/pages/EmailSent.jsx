@@ -13,8 +13,8 @@ const EmailSent = () => {
            </div>
            <button className="primary-button login-button">Login</button>
            <p className="resent">
-               <span>Don't receive the email?</span>
-               <a href="/">Resent</a>
+              <span>Don't receive the email?</span>
+              <a href="/">Resent</a>
            </p>
        </div>
    </div>

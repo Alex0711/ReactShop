@@ -1,0 +1,29 @@
+/*   FECHA - ARTICULOS - TOTAL   */
+.my-order-content{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0px;
+}
+.my-order-content p:first-child{
+    display: flex;
+    flex-direction: column;
+}
+.date{
+    font-size: var(--md);
+    font-weight: bold;
+}
+.check{
+    display: flex;
+    align-items: center;
+    font-size: var(--md);
+    font-weight: bold;
+}
+.arrow{
+    height: 9px;
+    width: 7px;
+    padding-left: 20px;
+}
+.articles{
+    color: var(--very-light-pink);
+    font-size: var(--sm);
+}
