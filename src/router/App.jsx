@@ -25,7 +25,7 @@ const App = () => {
       //Esta es la aplicación que va a manejar el contexto. le debo pasar un valor inicial
       //le paso el estado y la función addToCart
       <appContext.Provider value={inicialState}> 
-      <BrowserRouter>
+      <BrowserRouter basename='/reactShop'>
         <Layout>
           <Routes>
             <Route path="/" element={<Home />}/>

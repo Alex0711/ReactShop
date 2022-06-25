@@ -9,6 +9,7 @@ module.exports = {
         filename: 'bundle.js', //el nombre del archivo
         publicPath: './', //permite especificar la ruta base, pero no se si es de las
         // carpetas o de las rutas en el navegador
+        clean: true,
     },
     resolve: {
         extensions: ['.js', '.jsx'],
