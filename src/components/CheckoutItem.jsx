@@ -4,12 +4,12 @@ import '../styles/CheckoutItem.scss'
 const CheckoutItem = () => {
   return(
     <div>
-      <figure class="product">
+      <figure className="product">
         <div>
-          <img src="./imgs/bike.jpeg" alt="bike" class="product-img" />
-          <p class="product-name">Bike</p>
+          <img src="./imgs/bike.jpeg" alt="bike" className="product-img" />
+          <p className="product-name">Bike</p>
         </div>
-        <p class="product-price">$120</p>
+        <p className="product-price">$120</p>
       </figure>
     </div>
   )

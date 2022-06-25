@@ -1,40 +1,26 @@
 import React, { useState, useContext } from 'react';
-import appContext from '@context/appContext';
-
-import '../styles/Header.scss';
-import menu from "@icons/icon_menu.svg";
-import Menu from "@components/Menu"
-import yardSale from "@logos/logo_yard_sale.svg"
-import cart from "@icons/icon_shopping_cart.svg"
-import MyOrder from '@containers/MyOrder'; 
-
+import '@styles/Header.scss';
+import Menu from '@components/Menu';
+import MyOrder from '../containers/MyOrder';
+import menu from '@icons/icon_menu.svg';
+import logo from '@logos/logo_yard_sale.svg';
+import AppContext from '@context/appContext';
+import shoppingCart from '@icons/icon_shopping_cart.svg';
+ 
 const Header = () => {
-	const { state } = useContext(appContext)
-
-	const cartItems = (items) =>{
-		if (items > 0 && items < 10) {
-			return <div> {items} </div>
-		}
-		if (items === 0) {
-			return null
-		}
-		if (items > 9) {
-			return <div> +9 </div>
-		}
-	}
-
 	const [toggle, setToggle] = useState(false);
+	const [toggleOrders, setToggleOrders] = useState(false);
+	const { state } = useContext(AppContext);
+
 	const handleToggle = () => {
 		setToggle(!toggle);
 	}
 
-	const [toggleOrders, setToggleOrders] = useState(false);
-
 	return (
 		<nav>
-			<img src= {menu} alt="menu" className="menu" />
+			<img src={menu} alt="menu" className="menu" />
 			<div className="navbar-left">
-				<img src= {yardSale} alt="logo" className="nav-logo" />
+				<img src={logo} alt="logo" className="nav-logo" />
 				<ul>
 					<li>
 						<a href="/">All</a>
@@ -59,14 +45,14 @@ const Header = () => {
 			<div className="navbar-right">
 				<ul>
 					<li className="navbar-email" onClick={handleToggle}>
-						alex.senger@hotmail.com
+						platzi@example.com
 					</li>
-					<li 
-					className="navbar-shopping-cart"
-					onClick={() => setToggleOrders(!toggleOrders)}
+					<li
+						className="navbar-shopping-cart"
+						onClick={() => setToggleOrders(!toggleOrders)}
 					>
-						<img src= {cart} alt="shopping cart" />
-						{cartItems(state.cart.length)}
+						<img src={shoppingCart} alt="shopping cart" />
+						{state.cart.length > 0 ? <div>{state.cart.length}</div> : null}
 					</li>
 				</ul>
 			</div>

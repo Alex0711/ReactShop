@@ -4,6 +4,7 @@ import '../styles/Checkout.scss'
 import CheckoutItem from '../components/CheckoutItem';
 
 const Checkout = ()=> {
+  const { state, removeFromCart } = useContext(appContext)
   return(
     <main className="my-order"> 
       <h1 className="my-order-title">My order</h1>
@@ -17,9 +18,9 @@ const Checkout = ()=> {
         </div>
       </div>
       <div className="shopping-cart">
-        <CheckoutItem />
-        <CheckoutItem />
-        <CheckoutItem />
+        { state.cart.map(
+          <CheckoutItem />
+        ) }
       </div>
     </main>
   )

@@ -1,14 +1,7 @@
-.cards-container{
-    display: grid;
-    grid-template-columns: repeat(auto-fill, 140px); /*Se adapta al tamaño de la pantalla, creando tantas cajitas de 240px como quepan*/
-    gap: 26px; /*Es para dar el espaciado entre cada tarjeta*/
-    place-content: center;
-}
-
-@media (min-width: 640px) {
-  .cards-container{
-    display: grid;
-    grid-template-columns: repeat(auto-fill, 240px); /*Se adapta al tamaño de la pantalla, creando tantas cajitas de 240px como quepan*/
-    gap: 26px; /*Es para dar el espaciado entre cada tarjeta*/
-  }
+.ProductList {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
 }

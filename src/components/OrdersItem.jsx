@@ -1,19 +1,29 @@
-import React from 'react';
-import '../styles/OrdersItem.scss'
+import React, { useContext } from 'react';
+import '@styles/OrdersItem.scss';
+import AppContext from '@context/appContext';
+import xImage from '@icons/icon_close.png';
 
-const OrdersItem = () => {
-  return (
-    <div class="my-order-content">
-      <p>
-        <span class="date">04.09.2022</span>
-        <span class="articles">6 articles</span>
-      </p>
-      <div class="check">
-        <p class="check-number">$ 560</p>
-        <img class="arrow" src="./icons/flechita.svg" alt="arrow" />
-      </div>
-    </div>
-  )
+const ProductItem = ({ product }) => {
+	const { removeFromCart } = useContext(AppContext);
+
+	const handleClick = item => {
+		removeFromCart(item);
+	}
+ 
+	return (
+		<div className="ProductItem-order">
+			<img src={product.images[0]} alt={product.title} />
+			<div className="product-info">
+				<div>
+					<p>${product.price}</p>
+					<p>{product.title}</p>
+				</div>
+				<figure onClick={() => handleClick(product)} >
+					<img src={xImage} alt="X" />
+				</figure>
+			</div>
+		</div>
+	);
 }
 
-export default OrdersItem;
+export default ProductItem;

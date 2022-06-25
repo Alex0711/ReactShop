@@ -2,14 +2,17 @@ nav {
 	display: flex;
 	justify-content: space-between;
 	padding: 0 24px;
-    margin-bottom: 12px;
 	border-bottom: 1px solid var(--very-light-pink);
+	width: 100%;
 }
 .menu {
 	display: none;
 }
 .nav-logo {
 	width: 100px;
+}
+.navbar-right {
+	padding-right: 36px;
 }
 .navbar-left ul,
 .navbar-right ul {

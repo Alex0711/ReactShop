@@ -10,11 +10,14 @@
     --lg: 1.8rem;
 }
 body{
+    display: flex;
+    
     font-family: 'Quicksand', sans-serif;
     margin: 0;
 }
 #app{
-    display: block;
+    display: flex;
+
     width: 100%;
 }
 .Layout{
