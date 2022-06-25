@@ -7,7 +7,7 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, 'dist'), //un directorio
         filename: 'bundle.js', //el nombre del archivo
-        publicPath: '/', //permite especificar la ruta base, pero no se si es de las
+        publicPath: './', //permite especificar la ruta base, pero no se si es de las
         // carpetas o de las rutas en el navegador
     },
     resolve: {
