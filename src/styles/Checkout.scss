@@ -1,10 +1,14 @@
 body{
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
-
-}.my-order{
+}
+.Layout{
+    display: flex;
+    justify-content: center;
+}
+.my-order{
     width: 300px;
     padding-top: 80px;
 }
